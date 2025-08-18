@@ -9,7 +9,7 @@
     "mkdirp": "^1.0.4"
   },
   "devDependencies": {
-    "@playwright/test": "^1.53.1",
+    "@playwright/test": "^1.54.2",
     "@types/node": "^24.0.7",
     "connect-livereload": "~0.6.1",
     "grunt": "^1.6.1",
