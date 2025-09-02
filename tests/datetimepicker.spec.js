@@ -63,7 +63,6 @@ test('DateTime Picker Flow', async ({ page }) => {
     await screenFrame.getByRole('button', { name: 'Follow link' }).click();
 
     await previewScreenFrame.getByRole('button', { name: 'Create new instance ' }).waitFor();
-    await previewScreenFrame.getByRole('button', { name: 'Create new instance ' }).click();
     await clickNext(previewScreenFrame);
 
     await selectDateTime(previewScreenFrame, TEST_YEAR, JANUARY, FIRST_DAY);
@@ -79,18 +78,16 @@ test('DateTime Picker Flow', async ({ page }) => {
     await previewScreenFrame.getByRole('combobox').nth(1).selectOption(JANUARY);
     await clickNext(previewScreenFrame);
 
+
     await previewScreenFrame.getByRole('textbox', { name: 'Ethiopian Calendar' }).waitFor();
-    await previewScreenFrame.getByRole('textbox', { name: 'Ethiopian Calendar' }).click();
     await previewScreenFrame.getByRole('link', { name: ETHIOPIAN_DAY_7, exact: true }).click();
     await clickNext(previewScreenFrame);
 
     await previewScreenFrame.getByRole('textbox', { name: 'Islamic Calendar' }).waitFor();
-    await previewScreenFrame.getByRole('textbox', { name: 'Islamic Calendar' }).click();
     await previewScreenFrame.getByRole('link', { name: ISLAMIC_DAY_9, exact: true }).click();
     await clickNext(previewScreenFrame);
 
     await previewScreenFrame.getByRole('button', { name: 'Finalize' }).waitFor();
-    await previewScreenFrame.getByRole('button', { name: 'Finalize' }).click();
 
     await page.waitForTimeout(2000);
 });
